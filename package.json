@@ -1,0 +1,20 @@
+{
+  "name": "q-memcached",
+  "description": "A wrapper of 3rd-Eden/node-memcached with Q",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Hinc Liu",
+    "email": "hincubus@gmail.com",
+    "url": "http://hinc.me"
+  },
+  "main": ".",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hinc/node-q-memcached"
+  },
+  "dependencies": {
+    "q": "~0.9.7",
+    "memcached": "~0.2.6"
+  }
+}
