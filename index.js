@@ -11,6 +11,14 @@ module.exports = function (options) {
     throw new Error(msg);
   });
 
+  ['flush'].forEach(function(m) {
+    api[m] = function() {
+      var deferred = Q.defer();
+      mc[m](deferred.makeNodeResolver());
+      return deferred.promise;
+    };
+  });
+
   ['set', 'add', 'replace'].forEach(function (m) {
     api[m] = function (key, value, expire) {
       if (typeof expire !== 'number') {
