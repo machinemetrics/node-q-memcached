@@ -3,6 +3,8 @@ var Memcached = require('memcached'),
 
 
 module.exports = function (options) {
+  if(!options.hosts) throw new Error('Must specify hosts. Try new Memcached({ hosts: [\'host1\', \'host2\'] });');
+  
   var api = {},
   mc = api.memcached = new Memcached(options.hosts);
 
