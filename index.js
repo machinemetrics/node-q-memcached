@@ -4,7 +4,7 @@ var Memcached = require('memcached'),
 
 module.exports = function (options) {
   var api = {},
-  mc = api.memcached = new Memcached(options.hosts);
+  mc = api.memcached = new Memcached(options.hosts, options.config);
 
   mc.on('failure', function (details) {
     var msg = details.server + ' went down due to: ' + details.messages.join('');
