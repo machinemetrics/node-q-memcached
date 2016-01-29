@@ -1,7 +1,7 @@
 {
   "name": "q-memcached",
   "description": "A wrapper of 3rd-Eden/node-memcached with Q",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Hinc Liu",
